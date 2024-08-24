@@ -7,4 +7,20 @@ Sublayer.configuration.ai_provider = OllamaLlama31
 
 theme = "bikini bottom"
 elements = ["spongebob squarepants", "patrick starfish", "squidward tentacles"]
-puts DrSeussPoemGenerator.new(theme: theme, elements: elements).generate
+
+
+@messages = []
+@profiles = {}
+@counts = Hash.new(0)
+
+10.times do |i|
+  puts i
+  response = DrSeussPoemGenerator.new(theme: theme, elements: elements).generate
+  message = response["message"]
+  @messages << message
+  @profiles[i] = message.keys
+  @counts[message.keys] += 1
+end
+
+pp @profiles
+pp @counts
