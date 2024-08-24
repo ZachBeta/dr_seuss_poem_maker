@@ -1,4 +1,6 @@
-# Formatting is mismatched
+# Issue: Formatting is mismatched
+* Fill in contents from tutorial
+* https://docs.sublayer.com/docs/guides/running-local-llama31-with-ollama#basic-demo
 
 * Spin up ollama
 ```
