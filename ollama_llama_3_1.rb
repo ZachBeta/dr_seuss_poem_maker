@@ -29,7 +29,7 @@ class OllamaLlama31
 
       puts "===="
       puts "response:"
-      p response
+      pp response
       puts "==="
   
       message = response['message']
