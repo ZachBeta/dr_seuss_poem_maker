@@ -29,13 +29,6 @@ class OllamaLlama31
 
       response
 
-    #   puts "===="
-    #   puts "response:"
-    #   pp response
-    #   puts "==="
-
-    #   response["message"]["content"]
-  
     #   message = response['message']
   
     #   raise "No function called" unless message["tool_calls"].length > 0
