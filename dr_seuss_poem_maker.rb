@@ -17,6 +17,7 @@ elements = ["spongebob squarepants", "patrick starfish", "squidward tentacles"]
   puts i
   response = DrSeussPoemGenerator.new(theme: theme, elements: elements).generate
   message = response["message"]
+  pp message
   @messages << message
   @profiles[i] = message.keys
   @counts[message.keys] += 1

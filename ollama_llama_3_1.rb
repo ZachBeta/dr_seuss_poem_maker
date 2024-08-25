@@ -1,5 +1,9 @@
 class OllamaLlama31
     def self.call(prompt:, output_adapter:)
+      puts "==="
+      p output_adapter.format_properties
+      p output_adapter.format_required
+      puts "==="
       response = HTTParty.post(
         "http://localhost:11434/api/chat",
         body: {
@@ -10,6 +14,7 @@ class OllamaLlama31
               "content": prompt
             }
           ],
+          "format": "json",
           "stream": false,
           "tools": [
             {
