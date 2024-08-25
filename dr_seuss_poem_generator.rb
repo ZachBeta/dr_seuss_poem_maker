@@ -1,7 +1,7 @@
 class DrSeussPoemGenerator < Sublayer::Generators::Base
     llm_output_adapter type: :single_string,
-      name: "generated_poem"
-      # description: "The generated poem in the style of Dr. Seuss"
+      name: "generated_poem",
+      description: "The generated poem in the style of Dr. Seuss"
   
     def initialize(theme:, elements:)
       @theme = theme
